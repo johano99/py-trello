@@ -217,7 +217,7 @@ class TrelloClient(object):
 
         # if files specified, we don't want any data
         data = None
-        if files is None:
+        if files is None and post_args is not None:
             data = json.dumps(post_args)
 
         # set content type and accept headers to handle JSON
